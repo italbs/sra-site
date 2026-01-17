@@ -199,6 +199,39 @@
             background-color: #777;
         }
 
+        /* --- CURRICULUM SECTION (NEW) --- */
+        .curriculum { background-color: var(--primary-green); color: var(--white); }
+        .curriculum .section-title { color: var(--white); }
+        
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .curriculum-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 160, 68, 0.3); /* Subtle Gold Border */
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .curriculum-card h3 { color: var(--primary-gold); margin-bottom: 15px; font-size: 1.3rem; }
+        .curriculum-card ul { list-style: none; padding: 0; }
+        .curriculum-card li { 
+            position: relative; 
+            padding-left: 20px; 
+            margin-bottom: 10px; 
+            font-size: 0.95rem; 
+        }
+        .curriculum-card li::before {
+            content: '•';
+            color: var(--primary-gold);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
         /* --- COACH PROFILES --- */
         .coaches { background-color: var(--light-gray); }
         
@@ -230,19 +263,18 @@
 
         /* --- CHARITY PATHWAY --- */
         .charity {
-            background-color: var(--primary-green);
-            color: var(--white);
+            background-color: var(--white);
             text-align: center;
         }
 
-        .charity .section-title { color: var(--white); }
+        .charity .section-title { color: var(--primary-green); }
         .charity p { max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem; }
 
         /* --- FAQ SECTION --- */
-        .faq { background-color: var(--white); }
+        .faq { background-color: var(--light-gray); }
         
         .faq-item {
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #ddd;
             padding: 20px 0;
             max-width: 800px;
             margin: 0 auto;
@@ -307,6 +339,7 @@
         <div class="nav-container">
             <div class="nav-links">
                 <a href="#program">The Program</a>
+                <a href="#curriculum">Curriculum</a>
                 <a href="#coaches">Coaches</a>
                 <a href="#charity">Community</a>
                 <a href="#faq">FAQ</a>
@@ -347,7 +380,7 @@
                 <div class="phase-card future">
                     <span class="status-badge">Coming Later</span>
                     <h3>Phase 2</h3>
-                    <span class="subtitle">Under 14 - 15 | Expansion</span>
+                    <span class="subtitle">Under 14 - 16 | Expansion</span>
                     <p><strong>Focus:</strong> Expand, Refine, Execute.</p>
                     <p>Players enhance technical skills and tactical awareness under pressure. We develop strength, endurance, and mental toughness, preparing players for higher-level competition.</p>
                 </div>
@@ -355,10 +388,52 @@
                 <div class="phase-card future">
                     <span class="status-badge">Coming Later</span>
                     <h3>Phase 3</h3>
-                    <span class="subtitle">Under 16 - Opens | Performance</span>
+                    <span class="subtitle">Colts & Opens | Performance</span>
                     <p><strong>Focus:</strong> Lead, Elevate, Deliver.</p>
                     <p>High-performance preparation. Players refine positional specialties and leadership capabilities, representing the Stockman values with pride and humility.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="curriculum" class="section curriculum">
+        <div class="container">
+            <h2 class="section-title">The 8-Week Curriculum</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto; color: var(--text-light);">
+                A comprehensive high-performance program designed to take players to the next level. We prepare athletes for representative pathways through elite technical, tactical, and character development.
+            </p>
+            <div class="curriculum-grid">
+                
+                <div class="curriculum-card">
+                    <h3>Technical Mastery</h3>
+                    <ul>
+                        <li><strong>Contact:</strong> Tackle technique & body positioning.</li>
+                        <li><strong>Ball Carry:</strong> Footwork & fend.</li>
+                        <li><strong>Handling:</strong> Accurate catch/pass mechanics under pressure.</li>
+                        <li><strong>Breakdown:</strong> Clean-out technique & ball security.</li>
+                    </ul>
+                </div>
+
+                <div class="curriculum-card">
+                    <h3>Next-Level Tactics</h3>
+                    <ul>
+                        <li><strong>Representative Readiness:</strong> Understanding high-level game structures.</li>
+                        <li><strong>Decision Making:</strong> Problem-solving in 2v1 and 3v2 scenarios.</li>
+                        <li><strong>Space Awareness:</strong> Communication & shifting to space.</li>
+                        <li><strong>Defensive Shape:</strong> Ruck defence roles & holding the line.</li>
+                    </ul>
+                </div>
+
+                <div class="curriculum-card">
+                    <h3>The Stockman Way</h3>
+                    <ul>
+                        <li><strong>Elite Habits:</strong> Professional routines for aspiring players.</li>
+                        <li><strong>Mental Skills:</strong> Resilience & goal setting for higher honours.</li>
+                        <li><strong>Values:</strong> Integrity, Mateship, and Hard Work.</li>
+                        <li><strong>Team First:</strong> Supporting mates on and off the field.</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
@@ -402,7 +477,7 @@
             <p>We are proud to partner with <strong>Little Windmills</strong>, a charity dedicated to supporting seriously sick and injured country kids.</p>
             <p>Through our shared values, we work together to alleviate the financial burden on rural families and promote positive mental health outcomes for young people in the bush.</p>
             <br>
-            <a href="https://littlewindmills.com.au/" target="_blank" class="btn" style="border-color: var(--white); color: var(--white); background: transparent;">Visit Little Windmills</a>
+            <a href="https://littlewindmills.com.au/" target="_blank" class="btn" style="border-color: var(--primary-green); color: var(--primary-green); background: transparent;">Visit Little Windmills</a>
         </div>
     </section>
 
