@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockman Rugby Academy | Sunshine Coast</title>
+    <link rel="icon" type="image/png" href="Academy Logo 2.12.25.png">
+
+    <meta name="description" content="Stockman Rugby Academy — Sunshine Coast's elite rugby development program for U11 through Opens. 8-week terms at Maroochydore Rugby Union Club. Integrity, Mateship, Hard Work.">
+    <meta name="keywords" content="Rugby Academy, Junior Rugby, Maroochydore Rugby, Stockman Rugby, Rugby Coaching QLD, Youth Sports Development, Sunshine Coast Rugby">
+    <meta name="author" content="Stockman Rugby Academy">
+
+    <meta property="og:title" content="Stockman Rugby Academy | The Making of a Stockman">
+    <meta property="og:description" content="Sunshine Coast's elite rugby development program. Ages U11 to Opens. Integrity, Mateship, Hard Work.">
+    <meta property="og:image" content="og-image.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* =============================================
+           VARIABLES & RESET
+        ============================================= */
+        :root {
+            --green:       #0a1f26;
+            --green-mid:   #122e38;
+            --green-light: #1a4052;
+            --gold:        #c8961f;
+            --gold-light:  #e0b040;
+            --off-white:   #f5f0e8;
+            --white:       #ffffff;
+            --gray-light:  #f2ede5;
+            --gray-mid:    #d8d0c4;
+            --text-dark:   #1a1a1a;
+            --text-mid:    #4a4a4a;
+            --text-light:  #8a8a8a;
+            --radius:      6px;
+            --transition:  0.3s ease;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Subtle grain overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+            opacity: 0.022;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* =============================================
+           UTILITY
+        ============================================= */
+        .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+        .section-tag {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--green);
+            margin-bottom: 16px;
+        }
+        .section-title.light { color: var(--white); }
+        .section-title span { color: var(--gold); }
+
+        .section-intro {
+            font-size: 1.02rem;
+            color: var(--text-mid);
+            max-width: 620px;
+            margin-bottom: 48px;
+            line-height: 1.7;
+        }
+        .section-intro.light { color: rgba(255,255,255,0.68); }
+
+        .gold-line { width: 44px; height: 3px; background: var(--gold); margin-bottom: 18px; }
+
+        /* =============================================
+           BUTTONS
+        ============================================= */
+        .btn {
+            display: inline-block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 14px 30px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary { background: var(--gold); color: var(--green); border-color: var(--gold); }
+        .btn-primary:hover { background: transparent; color: var(--gold); }
+
+        .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.45); }
+        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+
+        .btn-outline-dark { background: transparent; color: var(--green); border-color: var(--green); }
+        .btn-outline-dark:hover { background: var(--green); color: var(--white); }
+
+        .btn-disabled {
+            background: #ddd;
+            color: #999;
+            border-color: #ddd;
+            cursor: not-allowed;
+            pointer-events: none;
+            display: block;
+            text-align: center;
+        }
+
+        /* =============================================
+           NAVIGATION
+        ============================================= */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--green);
+            border-bottom: 1px solid rgba(200,150,31,0.18);
+        }
+
+        .nav-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo { display: flex; align-items: center; gap: 11px; }
+        .nav-logo img { width: 34px; height: 34px; object-fit: contain; }
+
+        .nav-logo-text {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+        .nav-logo-text span { color: var(--gold); }
+
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+        }
+        .nav-links a:hover { color: var(--white); }
+
+        .nav-links .nav-cta {
+            color: var(--gold);
+            padding: 7px 16px;
+            border: 1.5px solid rgba(200,150,31,0.45);
+            border-radius: var(--radius);
+        }
+        .nav-links .nav-cta:hover { background: var(--gold); color: var(--green); border-color: var(--gold); }
+
+        /* Hamburger */
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+        .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--white); transition: var(--transition); transform-origin: center; }
+        .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+        .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        .nav-mobile { display: none; background: var(--green-mid); border-bottom: 1px solid rgba(200,150,31,0.12); }
+        .nav-mobile.open { display: block; }
+        .nav-mobile a {
+            display: block;
+            padding: 13px 24px;
+            color: rgba(255,255,255,0.75);
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .nav-mobile a:last-child { color: var(--gold); border-bottom: none; }
+        .nav-mobile a:hover { color: var(--white); background: rgba(255,255,255,0.04); }
+
+        /* =============================================
+           HERO
+        ============================================= */
+        .hero {
+            position: relative;
+            min-height: 92vh;
+            background-color: var(--green);
+            background-image:
+                linear-gradient(155deg, rgba(10,31,38,0.94) 0%, rgba(10,31,38,0.80) 55%, rgba(10,31,38,0.60) 100%),
+                url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 80px 0 100px;
+            overflow: hidden;
+        }
+
+        /* Diagonal accent */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 48%, rgba(200,150,31,0.035) 48%);
+            pointer-events: none;
+        }
+
+        .hero-content { position: relative; z-index: 1; max-width: 760px; }
+
+        .hero-eyebrow {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 28px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .hero h1 {
+            font-size: clamp(3.6rem, 8vw, 6.5rem);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 0.93;
+            margin-bottom: 8px;
+        }
+        .hero h1 .gold { color: var(--gold-light); }
+        .hero h1 .outline {
+            -webkit-text-stroke: 2px rgba(255,255,255,0.45);
+            color: transparent;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.68);
+            max-width: 500px;
+            margin: 24px 0 36px;
+            line-height: 1.65;
+        }
+
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(200,150,31,0.13);
+            border: 1px solid rgba(200,150,31,0.3);
+            border-radius: 100px;
+            padding: 6px 14px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 0.05em;
+        }
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.55; transform: scale(0.75); }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 34px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            opacity: 0.35;
+        }
+        .scroll-indicator span {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.68rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+        .scroll-arrow {
+            width: 18px;
+            height: 18px;
+            border-right: 1.5px solid var(--white);
+            border-bottom: 1.5px solid var(--white);
+            transform: rotate(45deg);
+            animation: bounceDown 1.6s ease-in-out infinite;
+        }
+        @keyframes bounceDown {
+            0%, 100% { transform: rotate(45deg) translate(0,0); }
+            50% { transform: rotate(45deg) translate(3px,3px); }
+        }
+
+        /* =============================================
+           TRUST BAR
+        ============================================= */
+        .trust-bar {
+            background: var(--off-white);
+            border-bottom: 1px solid var(--gray-mid);
+            padding: 28px 24px;
+        }
+        .trust-bar-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .trust-item { display: flex; align-items: center; gap: 13px; }
+        .trust-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--green);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .trust-icon svg { width: 18px; height: 18px; fill: var(--gold); }
+        .trust-label { font-size: 0.72rem; color: var(--text-light); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+        .trust-value { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--green); }
+
+        /* =============================================
+           PROGRAM PHASES
+        ============================================= */
+        .program { padding: 96px 0; background: var(--white); }
+
+        .phases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+        .phase-card {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--gray-mid);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .phase-card:hover { transform: translateY(-5px); box-shadow: 0 18px 44px rgba(10,31,38,0.12); }
+
+        .phase-card-top {
+            padding: 26px 28px;
+            background: var(--green);
+            position: relative;
+            overflow: hidden;
+        }
+        .phase-card-top::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 3px;
+            background: rgba(255,255,255,0.1);
+        }
+        .phase-card.active .phase-card-top::after { background: var(--gold); }
+        .phase-card.next .phase-card-top::after { background: rgba(200,150,31,0.55); }
+
+        .phase-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 5.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.06);
+            position: absolute;
+            top: -8px; right: 14px;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .phase-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .badge-complete { background: rgba(200,150,31,0.18); color: var(--gold-light); border: 1px solid rgba(200,150,31,0.3); }
+        .badge-open     { background: rgba(200,150,31,0.22); color: var(--gold-light); border: 1px solid rgba(200,150,31,0.4); }
+        .badge-coming   { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.45); border: 1px solid rgba(255,255,255,0.1); }
+
+        .phase-title { font-size: 1.55rem; color: var(--white); margin-bottom: 5px; }
+        .phase-ages { font-size: 0.82rem; color: var(--gold); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        .phase-card-body { padding: 22px 28px; background: var(--white); }
+        .phase-card.future .phase-card-body { background: var(--gray-light); }
+
+        .phase-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--gray-mid);
+        }
+        .phase-detail:last-of-type { margin-bottom: 16px; }
+        .phase-detail-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light); font-weight: 600; }
+        .phase-detail-value { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; color: var(--green); }
+
+        .phase-description { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 18px; }
+
+        /* =============================================
+           CURRICULUM
+        ============================================= */
+        .curriculum { padding: 96px 0; background: var(--green); }
+
+        .curriculum-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+        .curriculum-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(200,150,31,0.18);
+            border-radius: 10px;
+            padding: 30px;
+            transition: background 0.3s ease;
+        }
+        .curriculum-card:hover { background: rgba(255,255,255,0.07); }
+
+        .curriculum-card-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(200,150,31,0.13);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+        .curriculum-card-icon svg { width: 20px; height: 20px; fill: var(--gold); }
+
+        .curriculum-card h3 { font-size: 1.35rem; color: var(--white); margin-bottom: 18px; }
+
+        .curriculum-card ul { display: flex; flex-direction: column; gap: 11px; }
+
+        .curriculum-card li {
+            display: flex;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.5;
+        }
+        .curriculum-card li::before {
+            content: '';
+            flex-shrink: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--gold);
+            margin-top: 7px;
+        }
+        .curriculum-card li strong { color: rgba(255,255,255,0.88); }
+
+        /* =============================================
+           COACHES
+        ============================================= */
+        .coaches { padding: 96px 0; background: var(--gray-light); }
+
+        .coaches-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+        .coach-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--gray-mid);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .coach-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(10,31,38,0.1); }
+
+        .coach-img-wrap { aspect-ratio: 1; background: var(--green); overflow: hidden; }
+        .coach-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .coach-info { padding: 18px 20px; }
+        .coach-info h3 { font-size: 1.15rem; color: var(--green); margin-bottom: 4px; }
+        .coach-role { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+        .coach-bio { font-size: 0.84rem; color: var(--text-mid); line-height: 1.6; }
+
+        /* =============================================
+           1:1 COACHING
+        ============================================= */
+        .one-on-one { padding: 96px 0; background: var(--white); }
+
+        .one-on-one-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+
+        .one-on-one-text h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); color: var(--green); margin-bottom: 16px; }
+        .one-on-one-text p { color: var(--text-mid); margin-bottom: 14px; font-size: 0.98rem; }
+        .one-on-one-text em { font-size: 0.88rem; color: var(--text-light); }
+
+        .one-on-one-card {
+            background: var(--green);
+            border-radius: 12px;
+            padding: 44px;
+            text-align: center;
+        }
+        .one-on-one-card .big-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 5.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .one-on-one-card p { color: rgba(255,255,255,0.65); font-size: 0.92rem; margin-bottom: 28px; line-height: 1.65; }
+
+        /* =============================================
+           CHARITY
+        ============================================= */
+        .charity { padding: 96px 0; background: var(--green-mid); }
+
+        .charity-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center; }
+
+        .charity-logo-box {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(200,150,31,0.22);
+            border-radius: 12px;
+            padding: 44px 32px;
+            text-align: center;
+        }
+        .charity-logo-box h3 { font-size: 2rem; color: var(--gold); margin-bottom: 8px; }
+        .charity-logo-box p { font-size: 0.82rem; color: rgba(255,255,255,0.45); font-style: italic; }
+
+        .charity-content h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); color: var(--white); margin-bottom: 18px; }
+        .charity-content p { color: rgba(255,255,255,0.68); margin-bottom: 14px; font-size: 0.98rem; }
+
+        /* =============================================
+           FAQ
+        ============================================= */
+        .faq { padding: 96px 0; background: var(--gray-light); }
+
+        .faq-list { max-width: 740px; margin: 0 auto; }
+
+        .faq-item { border-bottom: 1px solid var(--gray-mid); }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            cursor: pointer;
+            gap: 14px;
+        }
+        .faq-question h3 {
+            font-size: 0.98rem;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            text-transform: none;
+            color: var(--green);
+            letter-spacing: 0;
+            line-height: 1.4;
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            background: var(--green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .faq-icon svg { width: 11px; height: 11px; fill: var(--gold); transition: transform 0.3s ease; }
+        .faq-item.open .faq-icon svg { transform: rotate(45deg); }
+
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .faq-answer-inner { padding: 0 0 20px; font-size: 0.93rem; color: var(--text-mid); line-height: 1.72; }
+        .faq-item.open .faq-answer { max-height: 400px; }
+
+        /* =============================================
+           REGISTER
+        ============================================= */
+        .register { padding: 96px 0; background: var(--white); }
+
+        .register-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
+
+        .register-card {
+            border: 2px solid var(--gray-mid);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .register-card:hover { border-color: var(--gold); box-shadow: 0 12px 32px rgba(10,31,38,0.08); }
+
+        .register-card-head { background: var(--green); padding: 22px 24px; }
+        .register-card-head .phase-tag {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+        .register-card-head h3 { font-size: 1.5rem; color: var(--white); }
+
+        .register-card-body { padding: 22px 24px; }
+        .register-meta { font-size: 0.84rem; color: var(--text-mid); margin-bottom: 18px; line-height: 1.7; }
+        .register-meta strong { color: var(--text-dark); }
+
+        .register-card-body .btn { display: block; text-align: center; width: 100%; margin-bottom: 8px; }
+
+        .register-note { margin-top: 44px; text-align: center; color: var(--text-mid); font-size: 0.92rem; }
+        .register-note a { color: var(--green); font-weight: 600; border-bottom: 1px solid currentColor; }
+
+        /* =============================================
+           MOBILE STICKY CTA
+        ============================================= */
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            z-index: 900;
+            background: var(--green);
+            border-top: 1px solid rgba(200,150,31,0.25);
+            padding: 12px 20px;
+        }
+        .mobile-cta .btn { display: block; text-align: center; width: 100%; }
+
+        /* =============================================
+           FOOTER
+        ============================================= */
+        footer { background: #08181f; padding: 60px 0 36px; }
+
+        .footer-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 44px;
+        }
+
+        .footer-brand img { width: 58px; opacity: 0.85; margin-bottom: 14px; }
+        .footer-tagline {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .footer-brand p { font-size: 0.84rem; color: rgba(255,255,255,0.38); line-height: 1.65; }
+
+        .footer-col h4 { font-size: 0.72rem; letter-spacing: 0.16em; color: rgba(255,255,255,0.35); margin-bottom: 14px; font-weight: 700; }
+        .footer-col ul li { margin-bottom: 9px; }
+        .footer-col ul li a { font-size: 0.88rem; color: rgba(255,255,255,0.58); }
+        .footer-col ul li a:hover { color: var(--white); }
+        .footer-col p { font-size: 0.87rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+        .footer-bottom {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 22px 24px 0;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
+
+        /* =============================================
+           SCROLL REVEAL
+        ============================================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* =============================================
+           RESPONSIVE
+        ============================================= */
+        @media (max-width: 1024px) {
+            .coaches-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+
+            .hero { min-height: 88vh; padding: 60px 0 80px; }
+            .hero h1 { font-size: 3.4rem; }
+            .hero h1 .outline { -webkit-text-stroke-width: 1.5px; }
+
+            .trust-bar-inner { grid-template-columns: repeat(2, 1fr); }
+
+            .phases-grid { grid-template-columns: 1fr; }
+            .curriculum-grid { grid-template-columns: 1fr; }
+            .coaches-grid { grid-template-columns: repeat(2, 1fr); }
+
+            .one-on-one-inner { grid-template-columns: 1fr; gap: 32px; }
+            .charity-inner { grid-template-columns: 1fr; gap: 28px; }
+
+            .register-grid { grid-template-columns: 1fr; }
+
+            .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+
+            .mobile-cta { display: block; }
+            body { padding-bottom: 66px; }
+
+            .faq-list { max-width: 100%; }
+        }
+
+        @media (max-width: 480px) {
+            .trust-bar-inner { grid-template-columns: 1fr; }
+            .coaches-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <img src="Academy Logo 2.12.25.png" alt="Stockman Rugby Academy">
+                <span class="nav-logo-text">Stockman <span>Rugby</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#program">Program</a>
+                <a href="#curriculum">Curriculum</a>
+                <a href="#coaches">Coaches</a>
+                <a href="#one-on-one">1:1 Coaching</a>
+                <a href="#faq">FAQ</a>
+                <a href="#register" class="nav-cta">Register</a>
+            </div>
+            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-mobile" id="mobileNav">
+            <a href="#program"    onclick="closeMobileNav()">Program</a>
+            <a href="#curriculum" onclick="closeMobileNav()">Curriculum</a>
+            <a href="#coaches"    onclick="closeMobileNav()">Coaches</a>
+            <a href="#one-on-one" onclick="closeMobileNav()">1:1 Coaching</a>
+            <a href="#charity"    onclick="closeMobileNav()">Community</a>
+            <a href="#faq"        onclick="closeMobileNav()">FAQ</a>
+            <a href="#register"   onclick="closeMobileNav()">Register Interest →</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">Sunshine Coast Rugby Academy</div>
+                <h1>
+                    The Making<br>
+                    <span class="gold">Of A</span><br>
+                    <span class="outline">Stockman</span>
+                </h1>
+                <p class="hero-sub">
+                    Elite rugby development for U11 through Opens. Eight weeks of technical mastery, tactical intelligence, and character building at Maroochydore Rugby Union Club.
+                </p>
+                <div class="hero-actions">
+                    <a href="#register" class="btn btn-primary">Register Your Interest</a>
+                    <a href="#program" class="btn btn-outline">View The Program</a>
+                    <div class="hero-badge">Phase 1 &amp; 2 — Term 2 Now Open</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="trust-bar-inner">
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <div>
+                    <div class="trust-label">Coaching Staff</div>
+                    <div class="trust-value">4 Expert Coaches</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                </div>
+                <div>
+                    <div class="trust-label">Program Length</div>
+                    <div class="trust-value">8-Week Terms</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <div>
+                    <div class="trust-label">Location</div>
+                    <div class="trust-value">Maroochydore, QLD</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+                </div>
+                <div>
+                    <div class="trust-label">Age Groups</div>
+                    <div class="trust-value">U11 Through Opens</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRAM PHASES -->
+    <section id="program" class="program">
+        <div class="container">
+            <div class="reveal" style="margin-bottom: 52px;">
+                <div class="section-tag">Development Pathway</div>
+                <div class="gold-line"></div>
+                <h2 class="section-title">Three Age Groups.<br><span>One Academy.</span></h2>
+                <p class="section-intro">Three programs, each built for a specific age group. Phase 1 and Phase 2 run concurrently in Term 2 — register for the one that matches your player's age.</p>
+            </div>
+
+            <div class="phases-grid">
+                <!-- Phase 1 -->
+                <div class="phase-card active reveal">
+                    <div class="phase-card-top">
+                        <div class="phase-number">1</div>
+                        <div class="phase-badge badge-open">Term 2 — Registrations Open</div>
+                        <h3 class="phase-title">Phase One</h3>
+                        <div class="phase-ages">Under 11 – 13 | Foundation</div>
+                    </div>
+                    <div class="phase-card-body">
+                        <div class="phase-detail">
+                            <span class="phase-detail-label">Commencing</span>
+                            <span class="phase-detail-value">Term 2, 2026</span>
+                        </div>
+                        <div class="phase-detail">
+                            <span class="phase-detail-label">Duration &amp; Cost</span>
+                            <span class="phase-detail-value">8 Weeks · $280</span>
+                        </div>
+                        <p class="phase-description"><strong>Focus: Engage, Develop, Perform.</strong> Rugby fundamentals, technique, and teamwork in a safe environment — building a love for the game alongside resilience and self-discipline.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTMw4Um2VfGGODHZPzTLQzH9ur3m2lTCzBQDTh8mwu4e2dLg/viewform?usp=header" target="_blank" class="btn btn-primary" style="display:block;text-align:center;">Register for Phase 1</a>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="phase-card next reveal" style="transition-delay: 0.1s">
+                    <div class="phase-card-top">
+                        <div class="phase-number">2</div>
+                        <div class="phase-badge badge-open">Term 2 — Registrations Open</div>
+                        <h3 class="phase-title">Phase Two</h3>
+                        <div class="phase-ages">Under 14 – 16 | Expansion</div>
+                    </div>
+                    <div class="phase-card-body">
+                        <div class="phase-detail">
+                            <span class="phase-detail-label">Commencing</span>
+                            <span class="phase-detail-value">Term 2, 2026</span>
+                        </div>
+                        <div class="phase-detail">
+                            <span class="phase-detail-label">Duration &amp; Cost</span>
+                            <span class="phase-detail-value">8 Weeks · $280</span>
+                        </div>
+                        <p class="phase-description"><strong>Focus: Expand, Refine, Execute.</strong> Technical skills and tactical awareness under pressure. Strength, endurance, and mental toughness for higher-level competition.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsP5IMaLZ7d_38pVLhgA4lGmuTNZpEIQW3yZJ4JLYShpJkAQ/viewform?usp=header" target="_blank" class="btn btn-primary" style="display:block;text-align:center;">Register for Phase 2</a>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="phase-card future reveal" style="transition-delay: 0.2s">
+                    <div class="phase-card-top">
+                        <div class="phase-number">3</div>
+                        <div class="phase-badge badge-coming">Coming Later 2026</div>
+                        <h3 class="phase-title">Phase Three</h3>
+                        <div class="phase-ages">Colts &amp; Opens | Performance</div>
+                    </div>
+                    <div class="phase-card-body">
+                        <div class="phase-detail">
+                            <span class="phase-detail-label">Dates</span>
+                            <span class="phase-detail-value">To Be Announced</span>
+                        </div>
+                        <div class="phase-detail">
+                            <span class="phase-detail-label">Focus</span>
+                            <span class="phase-detail-value">High Performance</span>
+                        </div>
+                        <p class="phase-description"><strong>Focus: Lead, Elevate, Deliver.</strong> Players refine positional specialties and leadership capabilities, representing the Stockman values with pride and humility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="container">
+            <div class="reveal" style="margin-bottom: 52px;">
+                <div class="section-tag">What You'll Learn</div>
+                <div class="gold-line"></div>
+                <h2 class="section-title light">The 8-Week <span>Curriculum</span></h2>
+                <p class="section-intro light">A comprehensive high-performance program designed to take players to the next level. We prepare athletes for representative pathways through elite technical, tactical, and character development.</p>
+            </div>
+            <div class="curriculum-grid">
+                <div class="curriculum-card reveal">
+                    <div class="curriculum-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/></svg>
+                    </div>
+                    <h3>Technical Mastery</h3>
+                    <ul>
+                        <li><strong>Contact:</strong> Tackle technique &amp; body positioning.</li>
+                        <li><strong>Ball Carry:</strong> Footwork, fend &amp; evasion skills.</li>
+                        <li><strong>Handling:</strong> Accurate catch/pass mechanics under pressure.</li>
+                        <li><strong>Breakdown:</strong> Clean-out technique &amp; ball security.</li>
+                    </ul>
+                </div>
+                <div class="curriculum-card reveal" style="transition-delay: 0.1s">
+                    <div class="curriculum-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                    </div>
+                    <h3>Next-Level Tactics</h3>
+                    <ul>
+                        <li><strong>Rep Readiness:</strong> Understanding high-level game structures.</li>
+                        <li><strong>Decision Making:</strong> Problem-solving in 2v1 and 3v2 scenarios.</li>
+                        <li><strong>Space Awareness:</strong> Communication &amp; shifting to space.</li>
+                        <li><strong>Defensive Shape:</strong> Ruck defence roles &amp; holding the line.</li>
+                    </ul>
+                </div>
+                <div class="curriculum-card reveal" style="transition-delay: 0.2s">
+                    <div class="curriculum-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"/></svg>
+                    </div>
+                    <h3>The Stockman Way</h3>
+                    <ul>
+                        <li><strong>Elite Habits:</strong> Professional routines for aspiring players.</li>
+                        <li><strong>Mental Skills:</strong> Resilience &amp; goal setting for higher honours.</li>
+                        <li><strong>Values:</strong> Integrity, Mateship, and Hard Work.</li>
+                        <li><strong>Team First:</strong> Supporting mates on and off the field.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COACHES -->
+    <section id="coaches" class="coaches">
+        <div class="container">
+            <div class="reveal" style="margin-bottom: 44px;">
+                <div class="section-tag">The Coaching Team</div>
+                <div class="gold-line"></div>
+                <h2 class="section-title">Meet The <span>Coaches</span></h2>
+                <p class="section-intro">Guided by experienced mentors dedicated to player safety and holistic development.</p>
+            </div>
+            <div class="coaches-grid">
+                <div class="coach-card reveal">
+                    <div class="coach-img-wrap"><img src="nigel.jpg" alt="Nigel Grevett"></div>
+                    <div class="coach-info">
+                        <h3>Nigel Grevett</h3>
+                        <div class="coach-role">Director of Rugby</div>
+                        <p class="coach-bio">Bringing extensive experience to the Academy, Nigel is committed to developing well-rounded players who embody the Stockman spirit on and off the field.</p>
+                    </div>
+                </div>
+                <div class="coach-card reveal" style="transition-delay: 0.1s">
+                    <div class="coach-img-wrap"><img src="isaac.jpg" alt="Isaac Talbot"></div>
+                    <div class="coach-info">
+                        <h3>Isaac Talbot</h3>
+                        <div class="coach-role">Academy Coach</div>
+                        <p class="coach-bio">Passionate about guiding junior athletes, Isaac focuses on building confidence, technical skill, and strong team values in every player.</p>
+                    </div>
+                </div>
+                <div class="coach-card reveal" style="transition-delay: 0.2s">
+                    <div class="coach-img-wrap"><img src="kaleb.jpg" alt="Kaleb Talbot"></div>
+                    <div class="coach-info">
+                        <h3>Kaleb Talbot</h3>
+                        <div class="coach-role">Academy Coach</div>
+                        <p class="coach-bio">Dedicated to fostering a high-performance culture, Kaleb ensures players develop the resilience and work ethic required to succeed in rugby.</p>
+                    </div>
+                </div>
+                <div class="coach-card reveal" style="transition-delay: 0.3s">
+                    <div class="coach-img-wrap"><img src="nathan.jpg" alt="Nathan Thompson"></div>
+                    <div class="coach-info">
+                        <h3>Nathan Thompson</h3>
+                        <div class="coach-role">Academy Coach</div>
+                        <p class="coach-bio">Focused on tactical understanding and game management, Nathan empowers players to make smart decisions under pressure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1:1 COACHING -->
+    <section id="one-on-one" class="one-on-one">
+        <div class="container">
+            <div class="one-on-one-inner">
+                <div class="one-on-one-text reveal">
+                    <div class="section-tag">Private Coaching</div>
+                    <div class="gold-line"></div>
+                    <h2 class="section-title">1:1 Private <span>Coaching</span></h2>
+                    <p>Looking for personalised attention to refine specific technical skills, positional play, or tactical understanding? The Stockman Academy offers 1:1 private coaching sessions with our elite coaching staff.</p>
+                    <p><em>Sessions are strictly subject to individual coach availability.</em></p>
+                    <br>
+                    <a href="mailto:nigel.grevett@stockmanrugby.com?subject=1:1%20Coaching%20Enquiry&body=Hi%20Nigel%2C%0D%0A%0D%0AI%20would%20like%20to%20enquire%20about%201%3A1%20coaching%20availability%20for%20my%20child.%0D%0A%0D%0AChild%27s%20Name%3A%20%0D%0AAge%20Group%3A%20%0D%0ASpecific%20Skills%2FFocus%20Area%3A%20%0D%0A%0D%0AThank%20you%2C" class="btn btn-outline-dark">Enquire About 1:1 Coaching</a>
+                </div>
+                <div class="reveal" style="transition-delay: 0.1s">
+                    <div class="one-on-one-card">
+                        <div class="big-number">1:1</div>
+                        <p>Personalised sessions tailored to your child's specific development needs, delivered by our expert coaching team.</p>
+                        <a href="mailto:nigel.grevett@stockmanrugby.com?subject=1:1%20Coaching%20Enquiry" class="btn btn-primary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHARITY -->
+    <section id="charity" class="charity">
+        <div class="container">
+            <div class="charity-inner">
+                <div class="charity-logo-box reveal">
+                    <h3>Little Windmills</h3>
+                    <p>Charity Partner</p>
+                </div>
+                <div class="charity-content reveal" style="transition-delay: 0.1s">
+                    <div class="section-tag">Community &amp; Giving Back</div>
+                    <div class="gold-line"></div>
+                    <h2 class="section-title light">Our Charity <span>Partner</span></h2>
+                    <p>We are proud to partner with <strong style="color:var(--gold-light)">Little Windmills</strong>, a charity dedicated to supporting seriously sick and injured country kids.</p>
+                    <p>Through our shared values, we work together to alleviate the financial burden on rural families and promote positive mental health outcomes for young people in the bush.</p>
+                    <br>
+                    <a href="https://littlewindmills.com.au/" target="_blank" class="btn btn-outline">Visit Little Windmills</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 44px;">
+                <div class="section-tag" style="justify-content: center; display: flex;">Common Questions</div>
+                <div class="gold-line" style="margin: 0 auto 18px;"></div>
+                <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+            </div>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Where and when is training?</h3>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-inner">Training is held at <strong>Maroochydore Rugby Union Club</strong> (4 Fifth Ave, Maroochydore QLD 4558). Sessions run from <strong>4:00 PM to 5:00 PM</strong> on Fridays.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>When does Phase 2 start?</h3>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-inner">Both Phase 1 (U11–13) and Phase 2 (U14–16) run in Term 2, 2026 — they're concurrent programs for different age groups. Submit your expression of interest below. Dates for Phase 3 will be announced later in the year.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I pay?</h3>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-inner">Once you register your interest, eligible players will receive the Enrolment Pack via email. This pack contains the EFT payment details.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is included in the $280 fee?</h3>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-inner">The $280 covers all 8 weeks of coaching, field hire, and insurance — plus an official <strong>Training Shirt</strong> and <strong>Water Bottle</strong> for every player.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do players need prior experience?</h3>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-inner">Phase 1 (Foundation) welcomes players of all experience levels — from first-timers to those looking to sharpen existing skills. Phase 2 assumes some familiarity with the game but doesn't require representative-level experience.</div></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is the Academy affiliated with Maroochydore Rugby Union Club?</h3>
+                        <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-inner">The Stockman Rugby Academy uses the Maroochydore Rugby Union Club facilities. The Academy operates as an independent elite development program based on the Sunshine Coast.</div></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTER -->
+    <section id="register" class="register">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <div class="section-tag" style="justify-content: center; display: flex;">Sunshine Coast</div>
+                <div class="gold-line" style="margin: 0 auto 18px;"></div>
+                <h2 class="section-title">Register Your <span>Interest</span></h2>
+                <p class="section-intro" style="margin: 0 auto; text-align: center;">Select your age group below to complete the Expression of Interest form. You'll receive your full Enrolment Pack via email once reviewed.</p>
+            </div>
+
+            <div class="register-grid">
+                <div class="register-card reveal">
+                    <div class="register-card-head">
+                        <div class="phase-tag">Phase 1 — Foundation</div>
+                        <h3>Ages 11–13</h3>
+                    </div>
+                    <div class="register-card-body">
+                        <div class="register-meta">
+                            <strong>Maroochydore Rugby Union Club</strong><br>
+                            4 Fifth Ave, Maroochydore QLD 4558<br>
+                            Fridays, 4:00 PM – 5:00 PM
+                        </div>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTMw4Um2VfGGODHZPzTLQzH9ur3m2lTCzBQDTh8mwu4e2dLg/viewform?usp=header" target="_blank" class="btn btn-primary">Register Interest — Ages 11–13</a>
+                    </div>
+                </div>
+
+                <div class="register-card reveal" style="transition-delay: 0.1s">
+                    <div class="register-card-head">
+                        <div class="phase-tag">Phase 2 — Expansion</div>
+                        <h3>Ages 14–16</h3>
+                    </div>
+                    <div class="register-card-body">
+                        <div class="register-meta">
+                            <strong>Maroochydore Rugby Union Club</strong><br>
+                            4 Fifth Ave, Maroochydore QLD 4558<br>
+                            Fridays, 4:00 PM – 5:00 PM
+                        </div>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsP5IMaLZ7d_38pVLhgA4lGmuTNZpEIQW3yZJ4JLYShpJkAQ/viewform?usp=header" target="_blank" class="btn btn-primary">Register Interest — Ages 14–16</a>
+                    </div>
+                </div>
+
+                <div class="register-card reveal" style="transition-delay: 0.2s">
+                    <div class="register-card-head">
+                        <div class="phase-tag">Phase 3 — Performance</div>
+                        <h3>Colts &amp; Opens</h3>
+                    </div>
+                    <div class="register-card-body">
+                        <div class="register-meta">
+                            <strong>Coming later in 2026</strong><br>
+                            Dates and venue to be confirmed.<br>
+                            Follow our socials for updates.
+                        </div>
+                        <span class="btn btn-disabled">Registrations Not Yet Open</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="register-note reveal">
+                Questions? Email <a href="mailto:nigel.grevett@stockmanrugby.com">nigel.grevett@stockmanrugby.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="Academy Logo 2.12.25.png" alt="Stockman Rugby Academy">
+                <div class="footer-tagline">Integrity. Mateship. Hard Work.</div>
+                <p>Stockman Rugby Academy is the Sunshine Coast's elite rugby development program, based at Maroochydore Rugby Union Club, Queensland.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#program">The Program</a></li>
+                    <li><a href="#curriculum">Curriculum</a></li>
+                    <li><a href="#coaches">Coaches</a></li>
+                    <li><a href="#one-on-one">1:1 Coaching</a></li>
+                    <li><a href="#charity">Community</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#register">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>
+                    <strong style="color:rgba(255,255,255,0.55)">Email</strong><br>
+                    <a href="mailto:nigel.grevett@stockmanrugby.com" style="color:var(--gold)">nigel.grevett@stockmanrugby.com</a>
+                </p>
+                <br>
+                <p>
+                    <strong style="color:rgba(255,255,255,0.55)">Location</strong><br>
+                    Maroochydore Rugby Union Club<br>
+                    4 Fifth Ave, Maroochydore QLD 4558
+                </p>
+                <br>
+                <p>
+                    <strong style="color:rgba(255,255,255,0.55)">Charity Partner</strong><br>
+                    <a href="https://littlewindmills.com.au/" target="_blank" style="color:rgba(255,255,255,0.5)">Little Windmills →</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stockman Rugby Academy. All rights reserved.</p>
+            <p>Maroochydore, Queensland, Australia</p>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY CTA -->
+    <div class="mobile-cta">
+        <a href="#register" class="btn btn-primary">Register Your Interest</a>
+    </div>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+        });
+        function closeMobileNav() {
+            hamburger.classList.remove('open');
+            mobileNav.classList.remove('open');
+        }
+
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
